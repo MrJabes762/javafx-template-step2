@@ -1,15 +1,8 @@
+/**
+ * Sample Skeleton for 'Login.fxml' Controller Class
+ */
+
 package br.edu.ifba.saj.fwads.controller;
-
-import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
-import java.security.spec.InvalidKeySpecException;
-import java.security.spec.KeySpec;
-import java.util.Base64;
-import java.util.List;
-import java.util.UUID;
-
-import javax.crypto.SecretKeyFactory;
-import javax.crypto.spec.PBEKeySpec;
 
 import br.edu.ifba.saj.fwads.App;
 import javafx.event.ActionEvent;
@@ -19,27 +12,29 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.input.MouseEvent;
 
-public class LoginController{
+public class LoginController {
 
-    @FXML
-    private TextField txUsuario;
+    @FXML // fx:id="txSenha"
+    private PasswordField txSenha; // Value injected by FXMLLoader
 
-    @FXML
-    private PasswordField txSenha;
-
-    @FXML
-    private Label lblEsqueceu;
-
-    @FXML
-    private Label lblGoogle;
+    @FXML // fx:id="txUsuario"
+    private TextField txUsuario; // Value injected by FXMLLoader
 
     @FXML
     void entrar(ActionEvent event) {
-        
-
+        if(txUsuario.getText().equals("admin") && txSenha.getText().equals("admin")){
+            new Alert(AlertType.INFORMATION, "Usuário e senha corretos").showAndWait();
+            App.setRoot("controller/Master.fxml");
+        }else{
+            new Alert(AlertType.ERROR, "Usuário ou senha inválidos").show();
+        }
     }
-    
+
+    @FXML
+    void limparCampos(ActionEvent event) {
+        txUsuario.setText("");
+        txSenha.setText("");
+    }
 
 }

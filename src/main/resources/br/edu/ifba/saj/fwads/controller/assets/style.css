@@ -27,6 +27,19 @@
     -fx-background-color: lightgreen;
 }
 
+.btn-cancelar:pressed {
+    -fx-background-color: darkgreen;
+}
+
+.btn-cancelar {
+    -fx-background-color: rgb(12, 221, 221);
+    -fx-background-radius: 25px;
+}
+
+.btn-cancelar:hover {
+    -fx-background-color: lightgreen;
+}
+
 .btn-login:pressed {
     -fx-background-color: darkgreen;
 }

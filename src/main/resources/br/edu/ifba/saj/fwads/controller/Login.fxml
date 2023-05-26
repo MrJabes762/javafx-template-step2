@@ -52,16 +52,16 @@
                   </Label>
                   <TextField fx:id="txUsuario" layoutX="39.0" layoutY="117.0" prefHeight="35.0" prefWidth="245.0" promptText="usuário" stylesheets="@assets/style.css" />
                   <PasswordField fx:id="txSenha" layoutX="39.0" layoutY="174.0" prefHeight="35.0" prefWidth="245.0" promptText="senha" stylesheets="@assets/style.css" />
-                  <Button defaultButton="true" layoutX="163.0" layoutY="233.0" mnemonicParsing="false" onAction="#entrar" prefHeight="35.0" prefWidth="120.0" styleClass="btn-login" stylesheets="@assets/style.css" text="Entrar" textFill="WHITE">
+                  <Button cancelButton="true" layoutX="164.0" layoutY="232.0" mnemonicParsing="false" onAction="#limparCampos" prefHeight="35.0" prefWidth="120.0" styleClass="btn-cancelar" stylesheets="@assets/style.css" text="Cancelar" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Button>
-                  <Label fx:id="lblEsqueceu" layoutX="39.0" layoutY="241.0" text="Esqueceu a senha?" textFill="#8e8e8e" underline="true">
+                  <Button defaultButton="true" layoutX="39.0" layoutY="232.0" mnemonicParsing="false" onAction="#entrar" prefHeight="35.0" prefWidth="120.0" styleClass="btn-login" stylesheets="@assets/style.css" text="Entrar" textFill="WHITE">
                      <font>
-                        <Font size="14.0" />
+                        <Font size="16.0" />
                      </font>
-                  </Label>
+                  </Button>
                </children>
             </AnchorPane>
          </children>
