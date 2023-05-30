@@ -45,7 +45,7 @@
 }
 
 .btn-menu-selected {
-    -fx-background-color: darkgreen;
+    -fx-background-color: lightgreen;
     -fx-background-radius: 0;
 }
 .btn-menu {
