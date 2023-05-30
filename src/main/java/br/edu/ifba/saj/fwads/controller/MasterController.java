@@ -42,11 +42,14 @@ public class MasterController {
     @FXML
     void showHome(ActionEvent event) {
         limparBotoes(event.getSource());
+        masterPane.setCenter(new Pane());
+
     }
 
     @FXML
     void showUsuarios(ActionEvent event) {
         limparBotoes(event.getSource());
+        masterPane.setCenter(new Pane());
     }
 
     private void limparBotoes(Object source) {
@@ -79,7 +82,7 @@ public class MasterController {
     private void showFXMLFile(String resourceName) {
         try {            
             Pane fxmlCarregado = FXMLLoader.load(getClass().getResource(resourceName));
-             masterPane.setCenter(fxmlCarregado);
+            masterPane.setCenter(fxmlCarregado);
         } catch (Exception e) {
             new Alert(AlertType.ERROR, "Erro ao carregar o arquivo " + resourceName).showAndWait();
             e.printStackTrace();
