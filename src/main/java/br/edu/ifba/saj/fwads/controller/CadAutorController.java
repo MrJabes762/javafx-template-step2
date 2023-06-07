@@ -18,16 +18,22 @@ public class CadAutorController {
 
     @FXML
     private TextField txNome;
-
+    Autor novoAutor;
+    public CadAutorController() {
+        this.novoAutor = null;
+    }
     @FXML
     private void salvarAutor() {
-        Autor novoAutor = new Autor(txNome.getText(),
+        novoAutor = new Autor(txNome.getText(),
                     txEmail.getText(), 
                     txCPF.getText());
         new Alert(AlertType.INFORMATION, 
         "Cadastrando Autor:"+novoAutor.getNome()).showAndWait();
         Biblioteca.listaAutores.add(novoAutor);
         limparTela();
+    }
+    public Autor pegarAutordaLista (){
+        return this.novoAutor;
     }
     @FXML
     private void limparTela() {
